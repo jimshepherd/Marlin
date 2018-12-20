@@ -130,6 +130,10 @@
 #define LED_PIN            13
 #define CASE_LIGHT_PIN      9
 
+#ifndef FILWIDTH_PIN
+  #define FILWIDTH_PIN      1   // Analog Input
+#endif
+
 //
 // M3/M4/M5 - Spindle/Laser Control
 //

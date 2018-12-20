@@ -237,7 +237,7 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN -1
+#define E0_AUTO_FAN_PIN 6
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
@@ -382,8 +382,8 @@
 // @section homing
 
 // Homing hits each endstop, retracts by these distances, then does a slower bump.
-#define X_HOME_BUMP_MM 5
-#define Y_HOME_BUMP_MM 5
+#define X_HOME_BUMP_MM 0
+#define Y_HOME_BUMP_MM 0
 #define Z_HOME_BUMP_MM 2
 #define HOMING_BUMP_DIVISOR { 2, 2, 4 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 //#define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
@@ -1102,10 +1102,10 @@
   #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
-  #define X_CURRENT          800  // rms current in mA. Multiply by 1.41 for peak current.
+  #define X_CURRENT          900  // rms current in mA. Multiply by 1.41 for peak current.
   #define X_MICROSTEPS        16  // 0..256
 
-  #define Y_CURRENT          800
+  #define Y_CURRENT          900
   #define Y_MICROSTEPS        16
 
   #define Z_CURRENT          800
@@ -1162,7 +1162,7 @@
    * M912 - Clear stepper driver overtemperature pre-warn condition flag.
    * M122 S0/1 - Report driver parameters (Requires TMC_DEBUG)
    */
-  //#define MONITOR_DRIVER_STATUS
+  #define MONITOR_DRIVER_STATUS
 
   #if ENABLED(MONITOR_DRIVER_STATUS)
     #define CURRENT_STEP_DOWN     50  // [mA]
